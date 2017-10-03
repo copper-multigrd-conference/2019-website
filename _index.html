@@ -1,0 +1,42 @@
+{% extends "_layout.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="d-block mx-auto main-block">
+      <h2 class="title text-danger">{{ info.date }}</h2>
+      <h2 class="title">Copper Mountain, Colorado</h2>
+    </div >
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="card">
+        <!-- from https://commons.wikimedia.org/wiki/File:Copper_Trail.jpg retrieved on 20160711 -->
+        <!-- This work has been released into the public domain by its
+          author, DebateLord at English Wikipedia. This applies worldwide.
+          In some countries this may not be legally possible; if so: DebateLord grants
+          anyone the right to use this work for any purpose, without any conditions,
+          unless such conditions are required by law. -->
+        <img class="img-fluid img-rounded" src="./images/640px-Copper_Trail.jpg" alt="Copper Mountain">
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <div class="card card-info copper-color">
+        <div class="card-block">
+          <h4 class="card-title">Conference Deadlines</h4>
+<a href="{{deadlines.abstracts.url}}"         > {{deadlines.abstracts.title}}:       </a>{{deadlines.abstracts.date}}        <br/>
+<span style="text-decoration: underline;">Student Competition </span> <br/>
+&nbsp &nbsp &nbsp <a href="{{deadlines.studentabs.url}}"      > {{deadlines.studentabs.title}}:    </a>{{deadlines.studentabs.date}}     <br/>
+&nbsp &nbsp &nbsp <a href="{{deadlines.studentpaper.url}}"      > {{deadlines.studentpaper.title}}:    </a>{{deadlines.studentpaper.date}}     <br/>
+<a href="{{deadlines.earlyregistration.url}}" > {{deadlines.earlyregistration.title}}:</a>{{deadlines.earlyregistration.date}}<br/>
+<a href="{{deadlines.specialissue.url}}"      > {{deadlines.specialissue.title}}:    </a>{{deadlines.specialissue.date}}     <br/>
+<a href="{{deadlines.lodging.url}}"           > {{deadlines.lodging.title}}:         </a>{{deadlines.lodging.date}}          <br/>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
