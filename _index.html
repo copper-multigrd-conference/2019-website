@@ -22,16 +22,17 @@
     </div>
 
     <div class="col-xs-12 col-md-6">
-      <div class="card card-info copper-color">
-        <div class="card-block">
+      <div class="card copper-color">
+        <div class="card-body">
           <h4 class="card-title">Conference Deadlines</h4>
-<a href="{{deadlines.abstracts.url}}"         > {{deadlines.abstracts.title}}:       </a>{{deadlines.abstracts.date}}        <br/>
-<span style="text-decoration: underline;">Student Competition </span> <br/>
-&nbsp &nbsp &nbsp <a href="{{deadlines.studentabs.url}}"      > {{deadlines.studentabs.title}}:    </a>{{deadlines.studentabs.date}}     <br/>
-&nbsp &nbsp &nbsp <a href="{{deadlines.studentpaper.url}}"      > {{deadlines.studentpaper.title}}:    </a>{{deadlines.studentpaper.date}}     <br/>
-<a href="{{deadlines.earlyregistration.url}}" > {{deadlines.earlyregistration.title}}:</a>{{deadlines.earlyregistration.date}}<br/>
-<a href="{{deadlines.specialissue.url}}"      > {{deadlines.specialissue.title}}:    </a>{{deadlines.specialissue.date}}     <br/>
-<a href="{{deadlines.lodging.url}}"           > {{deadlines.lodging.title}}:         </a>{{deadlines.lodging.date}}          <br/>
+          <ul class="fa-ul">
+            <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span> <a href="{{deadlines.abstracts.url}}"        > {{deadlines.abstracts.title}}:        </a> {{deadlines.abstracts.date}}</li>
+            <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span> <a href="{{deadlines.studentabs.url}}"       > {{deadlines.studentabs.title}}:       </a> {{deadlines.studentabs.date}}</li>
+            <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span> <a href="{{deadlines.studentpaper.url}}"     > {{deadlines.studentpaper.title}}:     </a> {{deadlines.studentpaper.date}}</li>
+            <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span> <a href="{{deadlines.earlyregistration.url}}"> {{deadlines.earlyregistration.title}}:</a> {{deadlines.earlyregistration.date}}</li>
+            <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span> <a href="{{deadlines.specialissue.url}}"     > {{deadlines.specialissue.title}}:     </a> {{deadlines.specialissue.date}}</li>
+            <li><span class="fa-li"><i class="far fa-calendar-alt"></i></span> <a href="{{deadlines.lodging.url}}"          > {{deadlines.lodging.title}}:          </a> {{deadlines.lodging.date}}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -55,7 +56,7 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <h6>Sponsored by</h6>
-      <a href="http://www.doe.gov">DOE</a>,
+      <a href="http://www.doe.gov">DOE</a>
       <!-- <a href="http://www.ibm.com">IBM</a>, -->
       <!-- <a href="http://www.llnl.gov/casc">LLNL</a>, -->
       <!-- <a href="http://www.lanl.gov">LANL</a> -->
