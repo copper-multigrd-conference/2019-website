@@ -19,7 +19,7 @@ os.makedirs(liveweb)
 
 # parse, render each template here
 env = Environment(loader=FileSystemLoader('./'))
-files = ['_index.html']
+files = ['_index.html', '_about.html', '_lodging.html']
 
 
 # remove blank entries from the yaml input
