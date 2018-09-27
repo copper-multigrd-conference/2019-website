@@ -34,12 +34,6 @@
   affil: DigitalGlobe, U.S.A.
   role: Program Committee
 
-- name: Joel Dendy
-  email: jed@lanl.gov
-  url: http://math.lanl.gov/~jed/
-  affil: Los Alamos National Laboratory, U.S.A.
-  role: Program Committee
-
 - name: Hans De Sterck
   email: hans.desterck@monash.edu
   url: http://www.hansdesterck.net/
@@ -82,12 +76,6 @@
   affil: Memorial University of Newfoundland, Canada
   role: Program Committee
 
-- name: Steve McCormick
-  email: stevem@colorado.edu
-  url: http://amath.colorado.edu/faculty/stevem/
-  affil: University of Colorado, U.S.A.
-  role: Program Committee
-
 - name: David Moulton
   email: moulton@lanl.gov
   url: http://math.lanl.gov/~moulton/
@@ -110,12 +98,6 @@
   email: jruge@colorado.edu
   url: http://amath.colorado.edu/faculty/jruge
   affil: University of Colorado, U.S.A.
-  role: Program Committee
-
-- name: Klaus Stüben
-  email: stueben@scai.fraunhofer.de
-  url: http://www.scai.fraunhofer.de/en/business-research-areas/numerical-software/products/samg.html
-  affil: Fraunhofer, Germany
   role: Program Committee
 
 - name: Stefan Vandewalle
