@@ -25,7 +25,8 @@ files = [\
 '_layout.html',
 '_lodging.html',
 '_people.html',
-'_registration.html']
+'_registration.html',
+'_student.html']
 
 
 # remove blank entries from the yaml input
