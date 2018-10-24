@@ -1,34 +1,42 @@
 abstracts:
   title: Presentation Abstracts
   date: January 14, 2019
+  url: submit.html
 
 studentpaper:
   title: Student Competition Paper
   date: January 9, 2019
+  url: student.html
 
 studentabs:
   title: Student Competition Abstract
   date: December 12, 2018
+  url: student.html
 
 earlyregistration:
   title: Early Registration
   date: January 18, 2019
+  url: registration.html
 
 registration:
   title: Registration
   date: TBD
+  url: registration.html
 
 lodging:
   title: Lodging
   date: February 21, 2019
+  url: lodging.html
 
 specialissue:
   title: Journal Special Issue
   date: (tentatively) June 15, 2019
+  url: about.html#specialissue
 
 specialissueopen:
   title: Journal Special Issue Open
   date: TBD
+  url: about.html#specialissue
 
 cancellation:
   date: TBD
