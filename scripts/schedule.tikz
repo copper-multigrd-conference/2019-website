@@ -25,10 +25,12 @@
 \draw[color=black!20] ( 2.5*\m, 0) -- ( 2.5*\m, -14*\r);
 \draw[color=black!20] ( 3.5*\m, 0) -- ( 3.5*\m, -14*\r);
 
+% Sunday
 \filldraw[line width=0.05mm,color=red!60,  fill=red!5] (-0.4*\m,  -9*\r+8*\r-0.5*\r) rectangle (0.4*\m, -18.0*\r+8*\r-0.5*\r) node[text=black,midway, rotate=90] {Tutorials};
 \filldraw[line width=0.05mm,color=blue!60, fill=blue!5] (-0.4*\m, -19*\r+8*\r-0.5*\r) rectangle (0.4*\m, -21.0*\r+8*\r-0.5*\r) node[text=black,midway] {Reception};
 \filldraw[line width=0.05mm,color=blue!60, fill=blue!5] ( 2.6*\m, -19*\r+8*\r-0.5*\r) rectangle (3.4*\m, -21.0*\r+8*\r-0.5*\r) node[text=black,midway] {Banquet};
 
+% Monday
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (0.95*\m, -10.0*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (1.05*\m, -8*\r+8*\r-0.5*\r)    rectangle (1.4*\m,  -10.0*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (0.95*\m, -12.5*\r+8*\r-0.5*\r);
@@ -36,6 +38,7 @@
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (0.6*\m,  -16.5*\r+8*\r-0.5*\r) rectangle (0.95*\m, -18.5*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (1.05*\m, -16.5*\r+8*\r-0.5*\r) rectangle (1.4*\m,  -18.5*\r+8*\r-0.5*\r);
 
+% Tuesday
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (\m+0.95*\m, -10.0*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+1.05*\m, -8*\r+8*\r-0.5*\r)    rectangle (\m+1.4*\m,  -10.0*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (\m+0.95*\m, -12.5*\r+8*\r-0.5*\r);
@@ -43,16 +46,16 @@
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+0.6*\m,  -16.5*\r+8*\r-0.5*\r) rectangle (\m+0.95*\m, -18.5*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+1.05*\m, -16.5*\r+8*\r-0.5*\r) rectangle (\m+1.4*\m,  -18.5*\r+8*\r-0.5*\r);
 
+% Wednesday
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (2*\m+0.95*\m, -10.0*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+1.05*\m, -8*\r+8*\r-0.5*\r)    rectangle (2*\m+1.4*\m,  -10.0*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (2*\m+0.95*\m, -12.5*\r+8*\r-0.5*\r);
 \filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+1.05*\m, -10.5*\r+8*\r-0.5*\r) rectangle (2*\m+1.4*\m,  -12.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+0.6*\m,  -16.5*\r+8*\r-0.5*\r) rectangle (2*\m+0.95*\m, -18.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+1.05*\m, -16.5*\r+8*\r-0.5*\r) rectangle (2*\m+1.4*\m,  -18.5*\r+8*\r-0.5*\r);
 
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (3*\m+0.95*\m, -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+1.05*\m, -8*\r+8*\r-0.5*\r)    rectangle (3*\m+1.4*\m,  -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (3*\m+0.95*\m, -12.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+1.05*\m, -10.5*\r+8*\r-0.5*\r) rectangle (3*\m+1.4*\m,  -12.5*\r+8*\r-0.5*\r);
+\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+0.6*\m,  -16.5*\r+8*\r-0.5*\r) rectangle (2*\m+1.4*\m, -18.5*\r+8*\r-0.5*\r);
+
+% Thursday
+\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (3*\m+1.4*\m, -10.0*\r+8*\r-0.5*\r);
+\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (3*\m+1.4*\m, -12.5*\r+8*\r-0.5*\r);
 
 \end{tikzpicture}
