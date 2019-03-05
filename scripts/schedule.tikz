@@ -3,21 +3,27 @@
 %\def\n{8}
 %\draw[step=\mult/\n] (0,0) grid (\mult,\mult);
 
+% general spacing
 \def\m{1.9}
-\node[anchor=south] (times)    at (-1.5*\m,0) {};
+
+% general spacing
+\def\r{0.3}
+
+% draw the days
+%\node[anchor=south] (times)     at (-1.5*\m,0) {};
 \node[anchor=south] (sunday)    at (0,0) {Sunday};
 \node[anchor=south] (monday)    at (1*\m,0) {Monday};
 \node[anchor=south] (tuesday)   at (2*\m,0) {Tuesday};
 \node[anchor=south] (wednesday) at (3*\m,0) {Wednesday};
 \node[anchor=south] (thursday)  at (4*\m,0) {Thursday};
 
-\def\r{0.3}
+% draw the times
 \newcount\ti
 \ti=1 %
 \foreach \t in {8am,9,10,11,12pm,1,2,3,4,5,6pm,7,8,9}
 {
-\node[right] (a) at (-1.0*\m, -\r*\ti) {\t};
-\global\advance\ti by1
+  \node[right] (\t) at (-1.0*\m, -\r*\ti) {\t};
+  \global\advance\ti by1
 }
 
 \draw[color=black!20] ( 0.5*\m, 0) -- ( 0.5*\m, -14*\r);
@@ -25,37 +31,57 @@
 \draw[color=black!20] ( 2.5*\m, 0) -- ( 2.5*\m, -14*\r);
 \draw[color=black!20] ( 3.5*\m, 0) -- ( 3.5*\m, -14*\r);
 
+\newcommand{\session}[7][]{
+\ifthenelse{\isempty{#7}}
+  {\coordinate (A) at ($(#2)+(-0.40*\m,-#3*\r+7*\r-0.5*\r)$);
+   \coordinate (B) at ($(#2)+( 0.40*\m,-#4*\r+7*\r-0.5*\r)$);}{}
+\ifthenelse{\equal{#7}{A}}
+  {\coordinate (A) at ($(#2)+(-0.40*\m,-#3*\r+7*\r-0.5*\r)$);
+   \coordinate (B) at ($(#2)+(-0.05*\m,-#4*\r+7*\r-0.5*\r)$);}{}
+\ifthenelse{\equal{#7}{B}}
+  {\coordinate (A) at ($(#2)+( 0.05*\m,-#3*\r+7*\r-0.5*\r)$);
+   \coordinate (B) at ($(#2)+( 0.40*\m,-#4*\r+7*\r-0.5*\r)$);}{}
+\filldraw[line width=0.05mm,color=#1!60,  fill=#1!5]
+(A)
+rectangle
+(B)
+node[text=black,midway,#6]{#5};
+}
+
+%\session[green]{monday}{13}{16}{test}{}{}
+%\session[green]{monday}{19}{21}{test}{}{A}
+%\session[green]{monday}{19}{21}{test}{}{B}
+
 % Sunday
-\filldraw[line width=0.05mm,color=red!60,  fill=red!5] (-0.4*\m,  -9*\r+8*\r-0.5*\r) rectangle (0.4*\m, -18.0*\r+8*\r-0.5*\r) node[text=black,midway, rotate=90] {Tutorials};
-\filldraw[line width=0.05mm,color=blue!60, fill=blue!5] (-0.4*\m, -19*\r+8*\r-0.5*\r) rectangle (0.4*\m, -21.0*\r+8*\r-0.5*\r) node[text=black,midway] {Reception};
-\filldraw[line width=0.05mm,color=blue!60, fill=blue!5] ( 2.6*\m, -19*\r+8*\r-0.5*\r) rectangle (3.4*\m, -21.0*\r+8*\r-0.5*\r) node[text=black,midway] {Banquet};
+\session[red]{sunday}{10}{18}{Tutorials}{rotate=90}{}
+\session[blue]{sunday}{19}{21}{Reception}{}{}
+\session[blue]{wednesday}{19}{21}{Banquet}{}{}
 
 % Monday
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (0.95*\m, -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (1.05*\m, -8*\r+8*\r-0.5*\r)    rectangle (1.4*\m,  -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (0.95*\m, -12.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (1.05*\m, -10.5*\r+8*\r-0.5*\r) rectangle (1.4*\m,  -12.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (0.6*\m,  -16.5*\r+8*\r-0.5*\r) rectangle (0.95*\m, -18.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (1.05*\m, -16.5*\r+8*\r-0.5*\r) rectangle (1.4*\m,  -18.5*\r+8*\r-0.5*\r);
+\session[black]{monday}{8}{10}{}{}{A}
+\session[black]{monday}{8}{10}{}{}{B}
+\session[black]{monday}{10.5}{12.5}{}{}{A}
+\session[black]{monday}{10.5}{12.5}{}{}{B}
+\session[black]{monday}{16.5}{18.5}{}{}{A}
+\session[black]{monday}{16.5}{18.5}{}{}{B}
 
 % Tuesday
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (\m+0.95*\m, -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+1.05*\m, -8*\r+8*\r-0.5*\r)    rectangle (\m+1.4*\m,  -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (\m+0.95*\m, -12.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+1.05*\m, -10.5*\r+8*\r-0.5*\r) rectangle (\m+1.4*\m,  -12.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+0.6*\m,  -16.5*\r+8*\r-0.5*\r) rectangle (\m+0.95*\m, -18.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (\m+1.05*\m, -16.5*\r+8*\r-0.5*\r) rectangle (\m+1.4*\m,  -18.5*\r+8*\r-0.5*\r);
+\session[black]{tuesday}{8}{10}{}{}{A}
+\session[black]{tuesday}{8}{10}{}{}{B}
+\session[black]{tuesday}{10.5}{12.5}{}{}{A}
+\session[black]{tuesday}{10.5}{12.5}{}{}{B}
+\session[black]{tuesday}{16.5}{18.5}{}{}{A}
+\session[black]{tuesday}{16.5}{18.5}{}{}{B}
 
 % Wednesday
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (2*\m+0.95*\m, -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+1.05*\m, -8*\r+8*\r-0.5*\r)    rectangle (2*\m+1.4*\m,  -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (2*\m+0.95*\m, -12.5*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+1.05*\m, -10.5*\r+8*\r-0.5*\r) rectangle (2*\m+1.4*\m,  -12.5*\r+8*\r-0.5*\r);
-
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (2*\m+0.6*\m,  -16.5*\r+8*\r-0.5*\r) rectangle (2*\m+1.4*\m, -18.5*\r+8*\r-0.5*\r);
+\session[black]{wednesday}{8}{10}{}{}{A}
+\session[black]{wednesday}{8}{10}{}{}{B}
+\session[black]{wednesday}{10.5}{12.5}{}{}{A}
+\session[black]{wednesday}{10.5}{12.5}{}{}{B}
+\session[black]{wednesday}{16.5}{18.5}{}{}{}
 
 % Thursday
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+0.6*\m,  -8*\r+8*\r-0.5*\r)    rectangle (3*\m+1.4*\m, -10.0*\r+8*\r-0.5*\r);
-\filldraw[line width=0.05mm,color=black!60, fill=black!5] (3*\m+0.6*\m,  -10.5*\r+8*\r-0.5*\r) rectangle (3*\m+1.4*\m, -12.5*\r+8*\r-0.5*\r);
+\session[black]{thursday}{8}{10}{}{}{}
+\session[black]{thursday}{10.5}{12.5}{}{}{}
 
 \end{tikzpicture}
