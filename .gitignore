@@ -6,3 +6,4 @@ data-not-in-version-control*
 __pycache__
 *.pyc
 .ipynb_checkpoints/
+latex.out/
